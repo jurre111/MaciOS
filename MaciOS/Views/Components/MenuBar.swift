@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct MenuBar: View {
+    @State private var currentTime = Date()
+    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         HStack(spacing: 0) {
             // Left side: Apple logo and menus
@@ -41,7 +45,7 @@ struct MenuBar: View {
                     .font(.system(size: 14))
                 
                 // Time
-                Text(currentTime)
+                Text(formattedTime)
                     .font(.system(size: 13))
                     .monospacedDigit()
             }
@@ -50,12 +54,15 @@ struct MenuBar: View {
         }
         .frame(height: 28)
         .background(.ultraThinMaterial)
+        .onReceive(timer) { input in
+            currentTime = input
+        }
     }
     
-    private var currentTime: String {
+    private var formattedTime: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "E MMM d  h:mm a"
-        return formatter.string(from: Date())
+        return formatter.string(from: currentTime)
     }
 }
 
