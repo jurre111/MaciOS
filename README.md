@@ -42,6 +42,26 @@ MaciOS/
 - Xcode 13.0+
 - Swift 5.5+
 
+## Building
+
+### Using Xcode
+1. Open `MaciOS.xcodeproj` in Xcode
+2. Select your target device or simulator
+3. Build and run the project (⌘R)
+
+### Building IPA with GitHub Actions
+The project includes a GitHub Actions workflow that automatically builds an IPA file:
+- Workflow runs on push/PR to main/master branches
+- Can be manually triggered from the Actions tab
+- Uploads IPA as an artifact (available for 30 days)
+- Workflow file: `.github/workflows/build-ios.yml`
+
+To manually trigger a build:
+1. Go to the Actions tab in GitHub
+2. Select "Build iOS App" workflow
+3. Click "Run workflow"
+4. Download the generated IPA from the workflow artifacts
+
 ## Getting Started
 
 1. Open the project in Xcode
