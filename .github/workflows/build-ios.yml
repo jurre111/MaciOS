@@ -11,6 +11,9 @@ jobs:
   build:
     name: Build and Export IPA
     runs-on: macos-latest
+    
+    permissions:
+      contents: read
 
     steps:
     - name: Checkout Repository
