@@ -11,8 +11,6 @@ struct WindowView: View {
     @EnvironmentObject var windowServer: WindowServer
     let window: AppWindow
     
-    @State private var dragOffset: CGSize = .zero
-    
     var body: some View {
         if !window.isMinimized {
             VStack(spacing: 0) {
@@ -32,9 +30,6 @@ struct WindowView: View {
                                 y: window.position.y + value.translation.height
                             )
                             windowServer.updatePosition(id: window.id, position: newPosition)
-                        }
-                        .onEnded { _ in
-                            dragOffset = .zero
                         }
                 )
                 
