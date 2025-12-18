@@ -17,7 +17,7 @@ struct MenuBar: View {
             // Left side: Apple logo and menus
             HStack(spacing: 16) {
                 // Apple logo
-                Text("")
+                Image(systemName: "apple.logo")
                     .font(.system(size: 18))
                     .foregroundColor(.primary)
                     .padding(.leading, 12)

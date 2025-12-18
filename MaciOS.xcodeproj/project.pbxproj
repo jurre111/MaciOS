@@ -13,6 +13,7 @@
 		A1000004000000000000001 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000004000000000000001 /* MenuBar.swift */; };
 		A1000005000000000000001 /* DockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000005000000000000001 /* DockView.swift */; };
 		A1000006000000000000001 /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000006000000000000001 /* WindowView.swift */; };
+		A1000007000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000008000000000000001 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A2000005000000000000001 /* DockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockView.swift; sourceTree = "<group>"; };
 		A2000006000000000000001 /* WindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
 		A2000007000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2000008000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			children = (
 				A2000001000000000000001 /* MaciOSApp.swift */,
 				A2000007000000000000001 /* Info.plist */,
+				A2000008000000000000001 /* Assets.xcassets */,
 				A4000004000000000000001 /* Models */,
 				A4000005000000000000001 /* Views */,
 			);
@@ -149,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1000007000000000000001 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
